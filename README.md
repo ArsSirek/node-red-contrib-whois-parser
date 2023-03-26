@@ -15,7 +15,7 @@ docker exec will allow you to login as root
 than you can install ruby with
 ```bash
   apk update
-  apk add ruby-dev
+  apk add ruby-full
 ```
 
 #links

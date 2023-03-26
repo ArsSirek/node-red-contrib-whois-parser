@@ -1,7 +1,7 @@
 var exec = require("child_process").exec;
 var path = require("path");
 
-var absolutePath = path.resolve("./node_modules/nod-red-contrib-whois-parser/whois-parse.rb");
+var absolutePath = path.resolve("./node_modules/node-red-contrib-whois-parser/whois-parse.rb");
 
 
 module.exports = function(RED) {
