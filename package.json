@@ -1,0 +1,23 @@
+{
+  "name": "node-red-contrib-whois-parser",
+  "version": "1.0.1",
+  "description": "nodered node to make whois requests based on ruby whois gem (via cmd exec, requires ruby installation)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodered",
+    "whois",
+    "ruby",
+    "whois-parser"
+  ],
+  "node-red": {
+    "version": ">=2.0.0",
+    "nodes": {
+      "whois-parser": "whois-parser.js"
+    }
+  },
+  "author": "Arsen Sirekanyan <arssirek@gmail.com>",
+  "license": "ISC"
+}
