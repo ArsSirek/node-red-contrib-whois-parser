@@ -1,6 +1,6 @@
 
 # Installation
-this node requires Ruby and following ruby gems: json, whois-parser installed on the server running nodered
+this node requires Ruby and following ruby gems: json, whois, whois-parser installed on the server running nodered
 
 ```bash
   apt install ruby-full rubygems
