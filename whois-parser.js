@@ -10,7 +10,6 @@ module.exports = function(RED) {
 
 		node.on('input', function (msg) {
 
-
 			node.status({
 				fill: "orange",
 				shape: "dot",
@@ -31,7 +30,10 @@ module.exports = function(RED) {
 						shape: "dot",
 						text: `response recived`,
 					});
-					node.send({payload: stdout});
+
+					msg.payload = JSON.parse(stdout);
+					msg.payload.status = 'success';
+					node.send(msg);
 				} else {
 					node.status({
 						fill: "red",
@@ -39,6 +41,12 @@ module.exports = function(RED) {
 						text: `extension not supported`,
 					});
 					node.error('something went wrong during the parsing, please open an issue on github');
+
+					msg.payload = {
+						status: 'error',
+						message: `extension on ${msg[config.domain_field]} is probably not yet supported, please contact support`
+					}
+					node.send(msg);
 				}
 			});
 		});

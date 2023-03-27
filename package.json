@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-whois-parser",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "nodered node to make whois requests based on ruby whois gem (via cmd exec, requires ruby installation)",
   "homepage": "https://github.com/ArsSirek/node-red-contrib-whois-parser",
   "repository": {
