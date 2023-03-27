@@ -1,0 +1,74 @@
+[
+  {
+    "id": "a1d4f2f7efb75fe9",
+    "type": "inject",
+    "z": "f6f2187d.f17ca8",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "example.com",
+    "payloadType": "str",
+    "x": 210,
+    "y": 340,
+    "wires": [
+      [
+        "432c9a2350349ffc"
+      ]
+    ]
+  },
+  {
+    "id": "544d9cfd0a293f63",
+    "type": "debug",
+    "z": "f6f2187d.f17ca8",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 770,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "4a1e89afb224c30f",
+    "type": "json",
+    "z": "f6f2187d.f17ca8",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 590,
+    "y": 340,
+    "wires": [
+      [
+        "544d9cfd0a293f63"
+      ]
+    ]
+  },
+  {
+    "id": "432c9a2350349ffc",
+    "type": "whois-parser",
+    "z": "f6f2187d.f17ca8",
+    "name": "whois-parser",
+    "domain_field": "payload",
+    "x": 410,
+    "y": 340,
+    "wires": [
+      [
+        "4a1e89afb224c30f"
+      ]
+    ]
+  }
+]

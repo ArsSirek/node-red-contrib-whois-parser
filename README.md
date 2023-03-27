@@ -1,6 +1,6 @@
 
 # Installation
-this node requires ruby and json, whois-parser gems installed on the server running nodered
+this node requires Ruby and following ruby gems: json, whois-parser installed on the server running nodered
 
 ```bash
   apt install ruby-full rubygems
@@ -8,12 +8,12 @@ this node requires ruby and json, whois-parser gems installed on the server runn
 ```
 
 # Troubleshooting
-in case you are working with nodered in docker container, you may need root access to install ruby.
+in case you are working with nodered in docker container, you may need the root access to install ruby.
 
 docker exec will allow you to login as root
 > docker exec -u 0 -it mynodered bash
 
-than you can install ruby with
+then you can install ruby with
 ```bash
   apk update
   apk add ruby-full
